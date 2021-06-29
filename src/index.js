@@ -1,5 +1,13 @@
 import _ from 'lodash';
 import './index.styl';
+import Icon from './assets/images/icon.svg';
+
+function image() {
+  const myImage = document.createElement('img');
+  myImage.src = Icon;
+
+  return myImage;
+}
 
 function component() {
   const element = document.createElement('h1');
@@ -10,4 +18,5 @@ function component() {
   return element;
 }
 
+document.body.appendChild(image());
 document.body.appendChild(component());
