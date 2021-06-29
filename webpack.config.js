@@ -13,7 +13,16 @@ module.exports = {
       {
         test: /\.styl$/,
         use: ['style-loader', 'css-loader', 'stylus-loader'],
-      }
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'assets/images/[name]_[hash:8].[ext]',
+          },
+        }],
+      },
     ],
   },
   plugins: [
