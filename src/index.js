@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import './index.styl';
+import './index.scss';
 import Icon from './assets/images/icon.svg';
 
 const image = () => {
