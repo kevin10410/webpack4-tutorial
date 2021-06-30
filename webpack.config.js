@@ -26,6 +26,10 @@ module.exports = {
         }
       },
       {
+        test: /\.pug$/,
+        loader: 'pug-plain-loader'
+      },
+      {
         test: /\.css$/,
         use: [
           'vue-style-loader',
@@ -33,12 +37,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.styl$/,
-        use: ['style-loader', 'css-loader', 'stylus-loader'],
+        test: /\.styl(us)?$/,
+        use: ['vue-style-loader', 'css-loader', 'stylus-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['vue-style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
