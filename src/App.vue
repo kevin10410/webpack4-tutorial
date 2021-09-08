@@ -4,16 +4,15 @@
       :value="inputValue"
       @input="inputHandler"
     />
-    <Button
-      text='submit'
+    <BButton
       @click="submitHandler"
-    />
+    >submit</BButton>
   </div>
 </template>
 
 <script>
 import Input from './components/Input.vue';
-import Button from './components/Button.vue';
+import { BButton } from 'bootstrap-vue';
 
 export default {
   data () {
@@ -32,7 +31,7 @@ export default {
   },
   components: {
     Input,
-    Button,
+    BButton,
   },
 }
 </script>
